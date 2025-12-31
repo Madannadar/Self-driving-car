@@ -5,11 +5,11 @@ class Controls{
         this.right = false;
         this.reverse = false;
 
-        this.#addKeyboardListeners(); // # means this is private 
-    }
+        this.#addKeyboardListeners(); // # means this is private no other file can access this function
+    } 
 
     #addKeyboardListeners(){
-        document.onkeydown = (event) => {
+        document.onkeydown = (event) => { // arrow function lets the "this" to point to the main "this" and not only inside the function
             switch(event.key){
                 case "ArrowLeft":
                     this.left = true;
@@ -17,14 +17,14 @@ class Controls{
                 case "ArrowRight":
                     this.right = true;
                     break;
-                case "ArrowUP":
+                case "ArrowUp":
                     this.forward = true;
                     break;
                 case "ArrowDown": 
                     this.reverse = true;
                     break;
             }
-            console.table(this);
+            // console.table(this);
         }
         document.onkeyup = (event) => {
             switch(event.key){
@@ -34,14 +34,14 @@ class Controls{
                 case "ArrowRight":
                     this.right = false;
                     break;
-                case "ArrowUP":
+                case "ArrowUp":
                     this.forward = false;
                     break;
                 case "ArrowDown": 
                     this.reverse = false;
                     break;
             } 
-            console.table(this);
+            // console.table(this);
         }
     }
 }
