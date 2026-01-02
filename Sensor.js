@@ -47,7 +47,6 @@ class Sensor{
                     touches.push(value);
                 }
             }
-            
         }
 
         if(touches.length==0){
