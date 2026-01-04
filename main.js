@@ -18,7 +18,7 @@ if(localStorage.getItem("bestBrain")){
             localStorage.getItem("bestBrain")
         );  
         if(i !=0){
-            NeuralNetwork.mutate(cars[i].brain,0.2);   
+            NeuralNetwork.mutate(cars[i].brain,0.1);   
         } 
     }
     // bestCar.brain = JSON.parse(localStorage.getItem("bestBrain")) // json.parse because localstorage only works with strings        
@@ -32,6 +32,7 @@ const traffic = [
     new Car(road.getLaneCenter(2), -600, 30, 50, "DUMMY", 2), 
     new Car(road.getLaneCenter(2), -800, 30, 50, "DUMMY", 2), 
     new Car(road.getLaneCenter(1), -800, 30, 50, "DUMMY", 2), 
+    new Car(road.getLaneCenter(0), -900, 30, 50, "DUMMY", 2), 
 ];
 
 animate();
