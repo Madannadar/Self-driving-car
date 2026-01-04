@@ -18,7 +18,7 @@ if(localStorage.getItem("bestBrain")){
             localStorage.getItem("bestBrain")
         );  
         if(i !=0){
-            NeuralNetwork.mutate(cars[i].brain,0.1);   
+            NeuralNetwork.mutate(cars[i].brain,0.5);   
         } 
     }
     // bestCar.brain = JSON.parse(localStorage.getItem("bestBrain")) // json.parse because localstorage only works with strings        
